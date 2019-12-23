@@ -22,7 +22,7 @@
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-    $url = ""
+    $url = "";
     if ($blob->getUrl()!=null){$url = $blob->getUrl()};
 ?>
 
