@@ -9,7 +9,7 @@ use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=storagesubmission2;AccountKey=BztD9pzNfqeKbfITL7t01dfMkUM0+QD45dCRAuVrT/amjG+vVr5TxydxLCxr5vHyNTI7pfmxIJ4oiJSjnXH3ZQ==";
-$containerName = "images";
+$containerName = "kenji11";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
