@@ -101,12 +101,15 @@
     <form action="index.php" method="post" enctype="multipart/form-data">
         Image to analyze: <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
         <input type="submit" name="submit" value="snap" />
-
-        <input type="text" name="inputImage" id="inputImage" value="" readonly />
-        <button id="analyze_btn" onclick="processImage()">Analyze image</button>
     </form> 
 
     <br><br>
+
+
+        <input type="text" name="inputImage" id="inputImage" value="" readonly />
+        <button id="analyze_btn" onclick="processImage()">Analyze image</button>
+
+           <br><br>
     
     <div id="wrapper" style="width:1020px; display:table;">
         <div id="jsonOutput" style="width:600px; display:table-cell;">
