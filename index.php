@@ -95,14 +95,14 @@
 </script>
 
 
-	
+
     <h1>Cognitive Service x Blob Storage</h1>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         Image to analyze: <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
         <input type="submit" name="submit" value="snap" />
 
-        <input type="text" name="inputImage" id="inputImage" value="<?php echo $blob->getUrl() ?>" readonly />
+        <input type="text" name="inputImage" id="inputImage" value="" readonly />
         <button id="analyze_btn" onclick="processImage()">Analyze image</button>
     </form> 
 
