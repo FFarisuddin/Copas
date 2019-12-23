@@ -106,7 +106,7 @@
     <br><br>
 
 
-        <input type="text" name="inputImage" id="inputImage" value="" readonly />
+        <input type="text" name="inputImage" id="inputImage" value="" />
         <button id="analyze_btn" onclick="processImage()">Analyze image</button>
 
            <br><br>
