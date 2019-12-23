@@ -27,6 +27,23 @@
 
 
 
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AGIT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+
+
 <script type="text/javascript">
     function processImage() {
         
@@ -78,18 +95,7 @@
 </script>
 
 
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>AGIT</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
+	
     <h1>Cognitive Service x Blob Storage</h1>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
