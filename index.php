@@ -23,6 +23,66 @@
     $listBlobsOptions->setPrefix("");
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 ?>
+
+
+
+
+<script type="text/javascript">
+    function processImage() {
+        
+        var subscriptionKey = "ef9e7d8394e24d87a1a08487ce5eca5b";
+ 
+        var uriBase =
+            "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
+ 
+        var params = {
+            "visualFeatures": "Categories,Description,Color",
+            "details": "",
+            "language": "en",
+        };
+ 
+        var sourceImageUrl = document.getElementById("inputImage").value;
+        document.querySelector("#sourceImage").src = sourceImageUrl;
+ 
+        // Make the REST API call.
+        $.ajax({
+            url: uriBase + "?" + $.param(params),
+ 
+            // Request headers.
+            beforeSend: function(xhrObj){
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader(
+                    "Ocp-Apim-Subscription-Key", subscriptionKey);
+            },
+ 
+            type: "POST",
+ 
+            // Request body.
+            data: '{"url": ' + '"' + sourceImageUrl + '"}',
+        })
+ 
+        .done(function(data) {
+            // Show formatted JSON on webpage.
+            $("#responseTextArea").val(JSON.stringify(data, null, 2));
+        })
+ 
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            // Display error message.
+            var errorString = (errorThrown === "") ? "Error. " :
+                errorThrown + " (" + jqXHR.status + "): ";
+            errorString += (jqXHR.responseText === "") ? "" :
+                jQuery.parseJSON(jqXHR.responseText).message;
+            alert(errorString);
+        });
+    };
+</script>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +94,11 @@
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         Image to analyze: <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="submit" value="Upload" />
+        <input type="submit" name="submit" value="snap" />
+
+        <input type="text" name="inputImage" id="inputImage"
+    value="<?php echo $blob->getUrl() ?>" readonly />
+        <button id="analyze_btn" onclick="processImage()">Analyze image</button>
     </form> 
 
     <br><br>
@@ -43,7 +107,7 @@
         <div id="jsonOutput" style="width:600px; display:table-cell;">
             Response:
             <br><br>
-            <textarea id="responseTextArea" class="UIInput" style="width:580px; height:400px;"></textarea>
+            <textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
         </div>
     
         <div id="imageDiv" style="width:420px; display:table-cell;">
