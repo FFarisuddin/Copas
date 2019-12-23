@@ -96,8 +96,7 @@
         Image to analyze: <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
         <input type="submit" name="submit" value="snap" />
 
-        <input type="text" name="inputImage" id="inputImage"
-    value="<?php echo $blob->getUrl() ?>" readonly />
+        <input type="text" name="inputImage" id="inputImage" value="<?php echo $blob->getUrl() ?>" readonly />
         <button id="analyze_btn" onclick="processImage()">Analyze image</button>
     </form> 
 
