@@ -34,7 +34,7 @@
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         Image to analyze: <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="Submit" value="Uploadd" />
+        <input type="submit" name="submit" value="Upload" />
     </form> 
 
     <br><br>
