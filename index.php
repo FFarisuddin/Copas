@@ -51,7 +51,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 			<ul class="navbar-nav mr-auto">
 			
 			<li class="nav-item active">
-				<a class="nav-link" href="http://submission2azure.azurewebsites.net/index.php">Analisis<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="http://fajarfarisuddinweb.azurewebsites.net/index.php">Analisis<span class="sr-only">(current)</span></a>
 			</li>
 		</div>
 		</nav>
