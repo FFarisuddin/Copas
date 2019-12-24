@@ -94,7 +94,7 @@
 
 <div align="center" >
  
-    <font background-color="black" size="5" face="verdana">Create Caption of Your Photo</h1>
+    <h1 background-color="black" face="verdana">Create Caption of Your Photo </h1>
 
 <br><br>
 
