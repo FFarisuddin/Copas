@@ -92,9 +92,9 @@
     };
 </script>
 
-<div align="center">
+<div align="center" >
  
-    <font size="5" face="verdana">Create Caption of Your Photo</h1>
+    <font background-color="black" size="5" face="verdana">Create Caption of Your Photo</h1>
 
 <br><br>
 
