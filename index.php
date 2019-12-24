@@ -104,10 +104,9 @@
         <br><br>
 
 <div display:table>
-<div display:table-cell; vertical-align:middle>
+<div display:table-cell>
 		<img id="sourceImage" width="400" />
-</div>
-<div>
+
 		<textarea id="responseTextArea" style="width:400px; height:300px;"></textarea>
 </div>
 </div>
