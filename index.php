@@ -94,11 +94,13 @@
 
 <div align="center">
  
-    <font size="3" face="verdana" background-color="blue"> Create Caption of Your Photo </font>
+    <font size="3" face="verdana"> Create Caption of Your Photo </font>
+
+    <br>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="submit" value="SNAP" />
+        <input type="submit" name="submit" value="MAGIC" />
     </form> 
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
