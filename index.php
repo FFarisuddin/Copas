@@ -93,10 +93,10 @@
 </script>
 
 <div align="center">
- 
+ <div display:table>
+ 	<div>
     <font size="3" face="verdana"> Create Caption of Your Photo </font>
 
-    <br>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
@@ -105,8 +105,8 @@
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <br>
+</div>
 
-<div display:table>
 <div display:table-cell>
 		<img id="sourceImage" width="400" />
 </div>
