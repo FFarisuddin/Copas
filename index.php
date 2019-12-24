@@ -94,7 +94,7 @@
 
 <div align="center">
  
-    <font size="3" face="verdana" color="blue"> Create Caption of Your Photo </font>
+    <font size="3" face="verdana" background-color="blue"> Create Caption of Your Photo </font>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
