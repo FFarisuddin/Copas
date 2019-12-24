@@ -123,7 +123,7 @@
         <div id="imageDiv" style="width:420px; display:table-cell;">
             Source image:
             <br><br>
-            <?php echo '<img src="data:image/jpeg;base64,'.$imageData.'">'?>;
+            <?php echo '<img width="400" src="data:image/jpeg;base64,'.$imageData.'">'?>;
             <!--<img id="sourceImage" width="400" />-->
         </div>
     </div>
