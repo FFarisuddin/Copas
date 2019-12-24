@@ -108,7 +108,7 @@
 		<img id="sourceImage" width="400" />
 </span>
 <span>
-		<textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
+		<textarea id="responseTextArea" style="width:400px; height:400px;"></textarea>
 </span>
 
 
