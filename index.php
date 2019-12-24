@@ -92,11 +92,9 @@
     };
 </script>
 
-<div align="center" >
+<div align="center">
  
-    <h1 background-color="black" face="verdana">Create Caption of Your Photo </h1>
-
-<br><br>
+    <font size="3" face="verdana" color="blue"> Create Caption of Your Photo </font>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
