@@ -52,7 +52,7 @@
             "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         var params = {
-            "visualFeatures": "Description",
+            "visualFeatures": "Description" : "Caption",
             "details": "",
             "language": "en",
         };
