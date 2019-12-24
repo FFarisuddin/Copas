@@ -96,7 +96,7 @@
  
     <font size="5" face="verdana">Create Caption of Your Photo</h1>
 
-<br>
+<br><br>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
