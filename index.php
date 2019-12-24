@@ -94,7 +94,9 @@
 
 <div align="center">
  
-    <font size="3" face="verdana" color="blue">Create Caption of Your Photo</h1>
+    <font size="5" face="verdana">Create Caption of Your Photo</h1>
+
+<br>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
@@ -102,7 +104,7 @@
     </form> 
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
-        <br><br>
+        <br>
 
 <div display:table>
 <div display:table-cell>
