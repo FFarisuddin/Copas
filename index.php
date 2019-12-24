@@ -22,8 +22,8 @@
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-    $last = $result->getBlobs();
-    $url = $blob->getUrl();
+    //$last = $result->getBlobs();
+    //$url = $blob->getUrl();
 ?>
 
 
