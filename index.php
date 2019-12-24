@@ -31,7 +31,7 @@
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());
 
-	$imageData = file_get_contents($url);
+	//$imageData = file_get_contents($url);
 	
 
 ?>
@@ -62,7 +62,7 @@
         };
  
         var sourceImageUrl = document.getElementById("inputImage").value;
-        //document.querySelector("#sourceImage").src = sourceImageUrl;
+        document.querySelector("#sourceImage").src = sourceImageUrl;
  
         // Make the REST API call.
         $.ajax({
@@ -123,8 +123,7 @@
         <div id="imageDiv" style="width:420px; display:table-cell;">
             Source image:
             <br><br>
-            <?php echo '<img width="400" src="data:image/jpeg;base64,'.$imageData.'">'?>;
-            <!--<img id="sourceImage" width="400" />-->
+            <img id="sourceImage" width="400" />
         </div>
     </div>
 </body>
