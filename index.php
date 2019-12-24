@@ -52,7 +52,7 @@
             "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         var params = {
-            "visualFeatures": "Categories,Description,Color",
+            "visualFeatures": "Description",
             "details": "",
             "language": "en",
         };
@@ -103,17 +103,7 @@
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <br><br>
-    <!--
-    <div id="wrapper" style="width:1020px; display:table;">
-        <div id="jsonOutput" style="width:600px; display:table-cell;">
-            <textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
-        </div>
-    
-        <div id="imageDiv" style="width:420px; display:table-cell;">
-            <img id="sourceImage" width="400" />
-        </div>
-    </div>
--->
+
 <table>
 <tr>
 	<td>
