@@ -31,7 +31,7 @@
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());
 
-	$imageData = base64_encode(file_get_contents($url));
+	$imageData = file_get_contents($url);
 	
 
 ?>
