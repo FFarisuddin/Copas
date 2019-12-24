@@ -45,7 +45,7 @@
 
 
 <script type="text/javascript">
-    function processImage() {
+    window.onload = function processImage() {
         
         var subscriptionKey = "ef9e7d8394e24d87a1a08487ce5eca5b";
  
@@ -99,7 +99,7 @@
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="submit" value="SNAP" onclick="processImage()" />
+        <input type="submit" name="submit" value="SNAP" />
     </form> 
 
     <br><br>
