@@ -103,15 +103,13 @@
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <br><br>
 
-<table>
+
 <span>
-		 <img id="sourceImage" width="400" />
+		<img id="sourceImage" width="400" />
 </span>
 <span>
 		<textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
 </span>
-
-</table>
 
 
 
