@@ -15,7 +15,6 @@
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
-        // echo fread($content, filesize($fileToUpload));
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
         header("Location: index.php");
     }
@@ -95,20 +94,14 @@
 </script>
 
 
-    <h1>Cognitive Service x Blob Storage</h1>
+    <h1>Create Caption of Your Photo</h1>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
         <input type="submit" name="submit" value="SNAP" />
     </form> 
 
-    <br><br>
-
-
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
-        <!--<button id="analyze_btn" onclick="processImage()">MAGIC</button>-->
-
-           <br><br>
     
     <div id="wrapper" style="width:1020px; display:table;">
         <div id="jsonOutput" style="width:600px; display:table-cell;">
