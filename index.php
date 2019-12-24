@@ -21,8 +21,10 @@
     }
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-   
-     do{
+    $blob = $blobClient->getBlob($containerName, $fileToUpload);
+   $url = $blob->getUrl();
+   /*
+    do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         foreach ($result->getBlobs() as $blob)
         {
@@ -30,7 +32,7 @@
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
-
+*/
 ?>
 
 
