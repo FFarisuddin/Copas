@@ -105,12 +105,11 @@
 
 <table>
 <tr>
-	<td id="responseTextArea">
-		
-	</td>
-	<td>
+		<textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
+</tr>
+<tr>
 		 <img id="sourceImage" width="400" />
-		</td>
+	
 	</tr>
 </table>
 
