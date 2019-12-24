@@ -22,6 +22,8 @@
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
+    $last = $result->getBlobs();
+    $url = $blob->getUrl();
 ?>
 
 
@@ -106,7 +108,7 @@
     <br><br>
 
 
-        <input type="text" name="inputImage" id="inputImage" value="" />
+        <input type="text" name="inputImage" id="inputImage" value="<?php $url ?>" />
         <button id="analyze_btn" onclick="processImage()">Analyze image</button>
 
            <br><br>
