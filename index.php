@@ -114,6 +114,7 @@
         </div>
     </div>
 -->
+<table>
 <tr>
 	<td>
 		<textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
@@ -122,7 +123,7 @@
 		 <img id="sourceImage" width="400" />
 		</td>
 	</tr>
-
+</table>
 
 
 
