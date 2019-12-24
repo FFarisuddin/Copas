@@ -105,8 +105,8 @@
 
 <table>
 <tr>
-	<td>
-		<textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
+	<td id="responseTextArea">
+		
 	</td>
 	<td>
 		 <img id="sourceImage" width="400" />
