@@ -102,17 +102,14 @@
     </form> 
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
+        <br><br>
     
     <div id="wrapper" style="width:1020px; display:table;">
         <div id="jsonOutput" style="width:600px; display:table-cell;">
-            Response:
-            <br><br>
             <textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
         </div>
     
         <div id="imageDiv" style="width:420px; display:table-cell;">
-            Source image:
-            <br><br>
             <img id="sourceImage" width="400" />
         </div>
     </div>
