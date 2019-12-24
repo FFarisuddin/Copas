@@ -108,7 +108,7 @@
     <br><br>
 
 
-        <input type="text" name="inputImage" id="inputImage" value="<?php $url ?>" />
+        <input type="text" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <button id="analyze_btn" onclick="processImage()">Analyze image</button>
 
            <br><br>
