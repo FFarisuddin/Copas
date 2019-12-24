@@ -99,14 +99,14 @@
 
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="submit" value="SNAP" />
+        <input type="submit" name="submit" value="SNAP" onclick="processImage()" />
     </form> 
 
     <br><br>
 
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
-        <button id="analyze_btn" onclick="processImage()">MAGIC</button>
+        <!--<button id="analyze_btn" onclick="processImage()">MAGIC</button>-->
 
            <br><br>
     
