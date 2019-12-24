@@ -31,6 +31,9 @@
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());
 
+	$imageData = base64_encode(file_get_contents($url));
+	
+
 ?>
 
 
@@ -120,7 +123,8 @@
         <div id="imageDiv" style="width:420px; display:table-cell;">
             Source image:
             <br><br>
-            <img id="sourceImage" width="400" />
+            <?php echo '<img src="data:image/jpeg;base64,'.$imageData.'">'?>;
+            <!--<img id="sourceImage" width="400" />-->
         </div>
     </div>
 </body>
