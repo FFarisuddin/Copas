@@ -21,9 +21,9 @@
     }
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-    $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-
+   
      do{
+     	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         foreach ($result->getBlobs() as $blob)
         {
             $url = $blob->getUrl();
@@ -32,15 +32,6 @@
     } while($result->getContinuationToken());
 
 ?>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -104,7 +95,6 @@
 </script>
 
 
-
     <h1>Cognitive Service x Blob Storage</h1>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
@@ -115,7 +105,7 @@
     <br><br>
 
 
-        <input type="text" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
+        <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <button id="analyze_btn" onclick="processImage()">Analyze image</button>
 
            <br><br>
