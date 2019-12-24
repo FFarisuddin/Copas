@@ -21,18 +21,18 @@
     }
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-    $blob = $blobClient->getBlob($containerName, $fileToUpload);
-   $url = $blob->getUrl();
-   /*
+    $blob2 = $blobClient->getBlob($containerName, $fileToUpload);
+  
+   
     do{
-     	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-        foreach ($result->getBlobs() as $blob)
+     	//$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
+        foreach ($blob2 as $blob)
         {
             $url = $blob->getUrl();
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
-*/
+
 ?>
 
 
