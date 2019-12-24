@@ -22,8 +22,15 @@
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-    //$last = $result->getBlobs();
-    //$url = $blob->getUrl();
+
+     do{
+        foreach ($result->getBlobs() as $blob)
+        {
+            $url = $blob->getUrl();
+        }
+        $listBlobsOptions->setContinuationToken($result->getContinuationToken());
+    } while($result->getContinuationToken());
+
 ?>
 
 
