@@ -29,10 +29,7 @@
             $url = $blob->getUrl();
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
-    } while($result->getContinuationToken());
-
-	//$imageData = file_get_contents($url);
-	
+    } while($result->getContinuationToken());	
 
 ?>
 
@@ -101,15 +98,15 @@
     <h1>Cognitive Service x Blob Storage</h1>
 
     <form action="index.php" method="post" enctype="multipart/form-data">
-        Image to analyze: <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="submit" value="snap" />
+        <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
+        <input type="submit" name="submit" value="SNAP" />
     </form> 
 
     <br><br>
 
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
-        <button id="analyze_btn" onclick="processImage()">Analyze image</button>
+        <button id="analyze_btn" onclick="processImage()">MAGIC</button>
 
            <br><br>
     
