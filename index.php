@@ -92,9 +92,8 @@
     };
 </script>
 
-<div align="center">
- <div display:table>
- 	<div>
+<div align="center" display:table>
+ <div>
     <font size="3" face="verdana"> Create Caption of Your Photo </font>
 
 
@@ -115,7 +114,6 @@
 </div>
 </div>
 
-</div>
 
 </body>
 </html>
