@@ -103,7 +103,7 @@
 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <br><br>
-    
+    <!--
     <div id="wrapper" style="width:1020px; display:table;">
         <div id="jsonOutput" style="width:600px; display:table-cell;">
             <textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
@@ -113,5 +113,18 @@
             <img id="sourceImage" width="400" />
         </div>
     </div>
+-->
+<tr>
+	<td>
+		<textarea id="responseTextArea" style="width:580px; height:400px;"></textarea>
+	</td>
+	<td>
+		 <img id="sourceImage" width="400" />
+		</td>
+	</tr>
+
+
+
+
 </body>
 </html>
