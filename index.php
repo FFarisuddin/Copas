@@ -94,14 +94,10 @@
 
 <div align="center" display:table>
  <div>
-    <font size="3" face="verdana"> Create Caption of Your Photo </font>
-
-
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
         <input type="submit" name="submit" value="MAGIC" />
     </form> 
-
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <br>
 </div>
