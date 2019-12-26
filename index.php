@@ -27,10 +27,9 @@
    		$i=0;
         foreach ($result->getBlobs() as $blob)
         {
-        	if(i==3){
+        	if(i>=0){
             	$url = $blob->getUrl();
 			}
-		i++;
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
