@@ -30,7 +30,6 @@
         	if(i==sizeof($result->getBlobs()-1){
             	$url = $blob->getUrl();
 			}
-		i+=1;
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
