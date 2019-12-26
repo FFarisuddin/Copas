@@ -20,14 +20,15 @@
     }
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-   	$size = sizeof($result->getBlobs();
-   	$i=0;
+   	
 
     do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
+     	$size = sizeof($result->getBlobs();
+   		$i=0;
         foreach ($result->getBlobs() as $blob)
         {
-        	if(i=$size-1){
+        	if(i=$size-1 && size>0){
             	$url = $blob->getUrl();
 			}
 		i++;
