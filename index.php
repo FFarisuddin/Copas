@@ -124,7 +124,7 @@ if ($size != 0){
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" required="" />
         <input type="submit" name="submit" value="MAGIC" />
     </form> 
-        <input type="text" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
+        <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
         <br>
 </div>
 
