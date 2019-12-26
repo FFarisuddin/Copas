@@ -115,7 +115,7 @@
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
     </div>
     <div display:table-cell>
-		<img id="sourceImage" style="max-width:50%;max-height:45%" />
+		<img id="sourceImage" style="max-width:100%;max-height:200px" />
     </div>
     <div>
 		<textarea id="responseTextArea" style="min-width:400px;min-height: 310px"></textarea>
