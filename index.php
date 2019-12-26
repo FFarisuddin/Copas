@@ -13,7 +13,7 @@
 
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
-    $blobClient->deleteContainer($containerName);
+    //$blobClient->deleteContainer($containerName);
 
     $createContainerOptions = new CreateContainerOptions();
     $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
