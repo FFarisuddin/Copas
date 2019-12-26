@@ -25,13 +25,11 @@
     do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
      	$size = sizeof($result->getBlobs();
-   		$i=0;
         foreach ($result->getBlobs() as $blob)
         {
         	if(i=$size-1){
             	$url = $blob->getUrl();
 			}
-		i++;
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
