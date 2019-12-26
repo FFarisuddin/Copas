@@ -11,8 +11,22 @@
     $connectionString = 'DefaultEndpointsProtocol=http;AccountName=blobff;AccountKey=9SkV9J8qyevowLNw6rXH1eOSbfKnRYohlvOhEwWUHJZMiZP4AiD24smx/xkLRyLBg3+8c5PdjYzcemAP6Pf1EQ==';
     $containerName = "images";
 
+
+
+
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
+    $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
+    do{ 
+        foreach ($result->getBlobs() as $blob2)
+        {
+                $name = $blob2->getName();
+                $blobClient->deleteBlob($containerName, $name);
+        }
+        $listBlobsOptions->setContinuationToken($result->getContinuationToken());
+    } while($result->getContinuationToken());   
+
+
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
@@ -23,8 +37,8 @@
     $listBlobsOptions->setPrefix("");
 
 
+
     do{
-     	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         foreach ($result->getBlobs() as $blob)
         {
             	$url = $blob->getUrl();
@@ -53,8 +67,7 @@
             "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         var params = {
-            "visualFeatures": "Description",
-          
+            "visualFeatures": "Description", 
         };
  
         var sourceImageUrl = document.getElementById("inputImage").value;
