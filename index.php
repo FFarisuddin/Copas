@@ -20,12 +20,17 @@
     }
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-   
+   	$size = sizeof($result->getBlobs();
+   	$i=0;
+
     do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         foreach ($result->getBlobs() as $blob)
         {
-            $url = $blob->getUrl();
+        	if(i=$size-1){
+            	$url = $blob->getUrl();
+			}
+		i++;
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
