@@ -48,7 +48,7 @@
   
  
 
-if ($size != 0){
+if ($size != 0 && isset($_POST['submit'])){
     do{
         foreach ($result->getBlobs() as $blob)
         {
