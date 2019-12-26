@@ -92,7 +92,7 @@
     };
 </script>
 
-<div align="center" display:table>
+<div style="width:50%" align="center" display:table>
  <div>
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
