@@ -17,7 +17,8 @@
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-    /*if (sizeof($result->getBlobs()) != 0){
+    $size = sizeof($result->getBlobs());
+    if ($size!= 0){
     do{ 
         foreach ($result->getBlobs() as $blob2)
         {
@@ -26,7 +27,7 @@
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());   
-    }*/
+    }
 
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
@@ -38,7 +39,7 @@
     $listBlobsOptions->setPrefix("");
 
 
-if (sizeof($result->getBlobs()) != 0){
+if ($size != 0){
     do{
         foreach ($result->getBlobs() as $blob)
         {
