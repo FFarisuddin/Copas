@@ -13,7 +13,7 @@
 
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
-    $url="";
+    $url=".";
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
@@ -47,7 +47,7 @@
 
 
 <script type="text/javascript">
-    if(url!=""){
+    if(document.getElementById("inputImage").value!="."){
     window.onload = function processImage() {
         
         var subscriptionKey = "ef9e7d8394e24d87a1a08487ce5eca5b";
