@@ -35,7 +35,7 @@
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-        header("Location: index.php");
+        //header("Location: index.php");
     }
    
 
