@@ -13,16 +13,16 @@
 
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
-
+    $url="";
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
         header("Location: index.php");
-    }
+   
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-   	
+
 
     do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
@@ -32,7 +32,7 @@
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
-
+ }
 ?>
 
 
@@ -47,6 +47,7 @@
 
 
 <script type="text/javascript">
+    if(url!=""){
     window.onload = function processImage() {
         
         var subscriptionKey = "ef9e7d8394e24d87a1a08487ce5eca5b";
@@ -93,6 +94,7 @@
             alert(errorString);
         });
     };
+};
 </script>
 
 <div style="max-width:100%;max-height:100%" align="center" display:table>
