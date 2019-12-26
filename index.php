@@ -103,10 +103,10 @@
 </div>
 
 <div display:table-cell>
-		<img id="sourceImage" style="max-width:50%" />
+		<img id="sourceImage" style="max-width:50%;max-height:400px" />
 </div>
 <div>
-		<textarea id="responseTextArea" style="min-width:400px"></textarea>
+		<textarea id="responseTextArea" style="min-width:400px;min-height: 400px"></textarea>
 </div>
 </div>
 
