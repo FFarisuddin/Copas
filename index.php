@@ -13,7 +13,7 @@
 
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
-    $url=".";
+    $url = ".";
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
