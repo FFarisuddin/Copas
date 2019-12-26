@@ -11,13 +11,13 @@
     $connectionString = 'DefaultEndpointsProtocol=http;AccountName=blobff;AccountKey=9SkV9J8qyevowLNw6rXH1eOSbfKnRYohlvOhEwWUHJZMiZP4AiD24smx/xkLRyLBg3+8c5PdjYzcemAP6Pf1EQ==';
     $containerName = "images";
 
-
+    $url="https://www.dicoding.com/blog/wp-content/uploads/2014/12/dicoding-header-logo.png";
 
 
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-    
+    if (sizeof($result->getBlobs()) != 0){
     do{ 
         foreach ($result->getBlobs() as $blob2)
         {
@@ -26,7 +26,7 @@
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());   
-
+    }
 
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
@@ -38,7 +38,7 @@
     $listBlobsOptions->setPrefix("");
 
 
-
+if (sizeof($result->getBlobs()) != 0){
     do{
         foreach ($result->getBlobs() as $blob)
         {
@@ -46,6 +46,7 @@
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
+}
 ?>
 
 
