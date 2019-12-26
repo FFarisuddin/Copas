@@ -10,8 +10,10 @@
 
     $connectionString = 'DefaultEndpointsProtocol=http;AccountName=blobff;AccountKey=9SkV9J8qyevowLNw6rXH1eOSbfKnRYohlvOhEwWUHJZMiZP4AiD24smx/xkLRyLBg3+8c5PdjYzcemAP6Pf1EQ==';
     $containerName = "images";
+
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
+    $blobClient->deleteContainer($containerName);
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
@@ -24,13 +26,9 @@
 
     do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-   		$i=0;
         foreach ($result->getBlobs() as $blob)
         {
-        	if($i==sizeof($result->getBlobs())-3){
             	$url = $blob->getUrl();
-			}
-		$i+=1;
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
