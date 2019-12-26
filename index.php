@@ -17,6 +17,8 @@
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
+    $listBlobsOptions = new ListBlobsOptions();
+    $listBlobsOptions->setPrefix("");
     $size = sizeof($result->getBlobs());
     if ($size!= 0){
     do{ 
@@ -35,8 +37,7 @@
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
         header("Location: index.php");
     }
-    $listBlobsOptions = new ListBlobsOptions();
-    $listBlobsOptions->setPrefix("");
+   
 
 
 if ($size != 0){
