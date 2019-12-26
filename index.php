@@ -27,9 +27,9 @@
      	$size = sizeof($result->getBlobs();
         foreach ($result->getBlobs() as $blob)
         {
-        	if(i=$size-1){
+        	
             	$url = $blob->getUrl();
-			}
+			
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
