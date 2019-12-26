@@ -46,37 +46,10 @@
 <body>
 
 
-
-
-<div style="max-width:100%;max-height:100%" align="center" display:table>
- <div>
-    <form action="index.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
-        <input type="submit" name="submit" value="MAGIC" />
-    </form> 
-        <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
-        <br>
-</div>
-
-<div display:table-cell>
-		<img id="sourceImage" style="max-width:50%;max-height:45%" />
-</div>
-<div>
-		<textarea id="responseTextArea" style="min-width:400px;min-height: 310px"></textarea>
-</div>
-</div>
-
-
-</body>
-</html>
-
-
-
-
 <script type="text/javascript">
-    if(document.getElementById("inputImage").value != "."){
+    
     window.onload = function processImage() {
-        
+        if(document.getElementById("inputImage").value != "."){
         var subscriptionKey = "ef9e7d8394e24d87a1a08487ce5eca5b";
  
         var uriBase =
@@ -123,3 +96,25 @@
     };
 };
 </script>
+
+<div style="max-width:100%;max-height:100%" align="center" display:table>
+ <div>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
+        <input type="submit" name="submit" value="MAGIC" />
+    </form> 
+        <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
+        <br>
+</div>
+
+<div display:table-cell>
+		<img id="sourceImage" style="max-width:50%;max-height:45%" />
+</div>
+<div>
+		<textarea id="responseTextArea" style="min-width:400px;min-height: 310px"></textarea>
+</div>
+</div>
+
+
+</body>
+</html>
