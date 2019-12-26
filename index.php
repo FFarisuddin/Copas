@@ -19,17 +19,15 @@
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-    
+     $size = sizeof($result->getBlobs());
   
 
     if (isset($_POST['submit'])) {
+
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
-        $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-        header("Location: index.php");
-    }
-   $size = sizeof($result->getBlobs());
-  if ($size!= 0){
+
+ if ($size!= 0){
     do{ 
         foreach ($result->getBlobs() as $blob2)
         {
@@ -41,6 +39,14 @@
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());   
     }
+
+
+        
+        $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
+        header("Location: index.php");
+    }
+  
+ 
 
 if ($size != 0){
     do{
