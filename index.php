@@ -92,7 +92,7 @@
     };
 </script>
 
-<div style="max-width:100%" align="center" display:table>
+<div style="max-width:100%;max-height:100%" align="center" display:table>
  <div>
     <form action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="photo" accept=".jpeg,.jpg,.png" />
@@ -103,7 +103,7 @@
 </div>
 
 <div display:table-cell>
-		<img id="sourceImage" style="max-width:50%;max-height:400px" />
+		<img id="sourceImage" style="max-width:50%;max-height:45%" />
 </div>
 <div>
 		<textarea id="responseTextArea" style="min-width:400px;min-height: 400px"></textarea>
