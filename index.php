@@ -106,11 +106,11 @@
     };
 </script>
 
-<div style="max-width:100%;max-height:100%" align="center" display:table>
+<div align="center" display:table>
     <div>
         <form action="index.php" method="post" enctype="multipart/form-data">
-            <input style="max-width:500px;max-height:30px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" />
-            <input style="max-width:100px;max-height:30px" type="submit" name="submit" value="MAGIC" />
+            <input style="width:500px;height:30px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" />
+            <input style="width:100px;height:30px" type="submit" name="submit" value="MAGIC" />
         </form> 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
     </div>
