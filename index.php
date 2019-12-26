@@ -24,7 +24,7 @@
 
     do{
      	$result = $blobClient->listBlobs($containerName, $listBlobsOptions);
-     	$size = sizeof($result->getBlobs();
+     	//$size = sizeof($result->getBlobs();
         foreach ($result->getBlobs() as $blob)
         {
         	
