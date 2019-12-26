@@ -107,23 +107,19 @@
 </script>
 
 <div style="max-width:100%;max-height:100%" align="center" display:table>
- <div>
-    <form action="index.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="photo" accept=".jpeg,.jpg,.png" required="" />
-        <input type="submit" name="submit" value="MAGIC" />
-    </form> 
-        <input type="text" name="inputImage" id="inputImage" value="<?php echo $url ?>" />
-        <br>
-</div>
-
-<div display:table-cell>
+    <div>
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="photo" accept=".jpeg,.jpg,.png" required="" />
+            <input type="submit" name="submit" value="MAGIC" />
+        </form> 
+        <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
+    </div>
+    <div display:table-cell>
 		<img id="sourceImage" style="max-width:50%;max-height:45%" />
-</div>
-<div>
+    </div>
+    <div>
 		<textarea id="responseTextArea" style="min-width:400px;min-height: 310px"></textarea>
+    </div>
 </div>
-</div>
-
-
 </body>
 </html>
