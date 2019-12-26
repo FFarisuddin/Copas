@@ -45,19 +45,14 @@
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
         header("Location: index.php");
     }
-  
- 
+
 
 if ($size != 0){
-    do{
-        foreach ($result->getBlobs() as $blob)
-        {
-            	$url = $blob->getUrl();
-        }
-        $listBlobsOptions->setContinuationToken($result->getContinuationToken());
-    } while($result->getContinuationToken());	
+            $url = "http://blobff.blob.core.windows.net/images/".$filetoUpload;
 }
 ?>
+
+
 
 
 
