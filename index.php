@@ -14,6 +14,12 @@
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
 
+    $createContainerOptions = new CreateContainerOptions();
+    $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
+    $createContainerOptions->addMetaData("key1", "value1");
+    $createContainerOptions->addMetaData("key2", "value2");
+    $blobClient->createContainer($containerName, $createContainerOptions);
+
 
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
