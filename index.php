@@ -28,7 +28,7 @@
    		$i=0;
         foreach ($result->getBlobs() as $blob)
         {
-        	if(i=$size-1 && size>0){
+        	if(i=$size-1){
             	$url = $blob->getUrl();
 			}
 		i++;
