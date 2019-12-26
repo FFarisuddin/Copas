@@ -20,25 +20,27 @@
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
     $size = sizeof($result->getBlobs());
-    if ($size!= 0){
-    do{ 
-        foreach ($result->getBlobs() as $blob2)
-        {
-                $name = $blob2->getName();
-                $blobClient->deleteBlob($containerName, $name);
-        }
-        $listBlobsOptions->setContinuationToken($result->getContinuationToken());
-    } while($result->getContinuationToken());   
-    }
+  
 
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-        //header("Location: index.php");
+        header("Location: index.php");
     }
    
-
+  if ($size!= 0){
+    do{ 
+        foreach ($result->getBlobs() as $blob2)
+        {
+            $name = $blob2->getName();
+                if($name != $fileToUpload){
+                    $blobClient->deleteBlob($containerName, $name);
+                }
+        }
+        $listBlobsOptions->setContinuationToken($result->getContinuationToken());
+    } while($result->getContinuationToken());   
+    }
 
 if ($size != 0){
     do{
