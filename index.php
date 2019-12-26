@@ -9,11 +9,11 @@
     use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
     $connectionString = 'DefaultEndpointsProtocol=http;AccountName=blobff;AccountKey=9SkV9J8qyevowLNw6rXH1eOSbfKnRYohlvOhEwWUHJZMiZP4AiD24smx/xkLRyLBg3+8c5PdjYzcemAP6Pf1EQ==';
-    $containerName = "images".generateRandomString();
+    $containerName = "images";
 
     // Create blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
-    //$blobClient->deleteContainer($containerName);
+    $blobClient->deleteContainer($containerName);
 
     $createContainerOptions = new CreateContainerOptions();
     $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
