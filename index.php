@@ -18,7 +18,7 @@
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
         header("Location: index.php");
-   
+    }
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
 
@@ -31,7 +31,6 @@
         }
         $listBlobsOptions->setContinuationToken($result->getContinuationToken());
     } while($result->getContinuationToken());	
- }
 ?>
 
 
