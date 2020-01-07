@@ -139,8 +139,9 @@
     </div>
     <div class="column" display:table-cell>
 		<img id="sourceImage" style="max-width:100%;max-height:200px" />
-		<textarea id="responseTextArea" style="min-width:600px;min-height:350px"></textarea>
-    </div>
 </div>
+ </div>
+        <textarea id="responseTextArea" style="min-width:600px;min-height:350px"></textarea>
+    </div>
 </body>
 </html>
