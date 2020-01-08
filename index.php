@@ -108,9 +108,9 @@
 <div align="center">
     <div>
         <form action="index.php" method="post" enctype="multipart/form-data">
-            <font face="verdana" color="white"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
+            <font face="verdana"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
             <input style="width:250px;height:70px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" /> <br>
-            <font face="verdana" color="white"> 2. Klik "MAGIC" mengetahui informasi fotoMU. </font> <br>
+            <font face="verdana"> 2. Klik "MAGIC" mengetahui informasi fotoMU. </font> <br>
             <input style="width:90px;height:30px" type="submit" name="submit" value="MAGIC" />
         </form> 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
