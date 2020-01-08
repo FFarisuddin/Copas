@@ -53,15 +53,6 @@
 <head>
     <title>Eftu Indonesia (F2)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<style>
-.boxsizingBorder {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-
-    width: 100%;
-}
-</style>
 </head>
 <body>
 
@@ -128,7 +119,7 @@
 		<img id="sourceImage" style="max-width:100%;max-height:200px" />
     </div>
     <div>
-        <textarea id="responseTextArea" style="resize:none"></textarea>
+        <textarea id="responseTextArea" style="resize:none;min-width:100%;min-height:100px"></textarea>
     </div>
 </div>
 </body>
