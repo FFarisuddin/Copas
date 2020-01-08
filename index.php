@@ -54,7 +54,7 @@
     <title>Eftu Indonesia (F2)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
-<body style="background-image: url('https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg')">
+<body style="background-image: url('https://trinitynewhaven.org/wp-content/uploads/2016/08/Background-North-View-Trinity-Church-on-Easter-2014-25-percent-opacity-624x432-1.png')">
 
 
 <script type="text/javascript">
