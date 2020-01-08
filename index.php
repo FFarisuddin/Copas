@@ -53,24 +53,6 @@
 <head>
     <title>Eftu Indonesia (F2)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<style>
-    body, html {
-  height: 100%;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
 </head>
 <body>
 
@@ -123,7 +105,7 @@
     };
 </script>
 
-<div align="center">
+<div align="center" style="background-image: url('https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg');">
     <div>
         <form action="index.php" method="post" enctype="multipart/form-data">
             <font face="verdana"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
