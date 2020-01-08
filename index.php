@@ -127,7 +127,7 @@
 </script>
 
 <div class="row" align="center" display:table>
-    <div class="column">
+    <div class="column" align="left">
         <form action="index.php" method="post" enctype="multipart/form-data">
             1. Klik "Choose File" untuk pilih foto yang diinginkan. <br>
             <input style="width:500px;height:70px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" /><br>
