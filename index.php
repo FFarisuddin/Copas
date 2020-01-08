@@ -87,7 +87,7 @@
             "https://computer-visionn.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         var params = {
-            "visualFeatures": "description.captions.text", 
+            "visualFeatures": "description.captions", 
         };
  
         var sourceImageUrl = document.getElementById("inputImage").value;
