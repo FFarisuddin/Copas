@@ -137,10 +137,10 @@
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
     </div>
     <div>
-		<img id="sourceImage" style="resize:none;max-width:100%;max-height:200px" />
+		<img id="sourceImage" style="max-width:100%;max-height:200px" />
     </div>
     <div>
-        <textarea id="responseTextArea" style="width:500px;min-height:100px"></textarea>
+        <textarea id="responseTextArea" style="resize:none;width:500px;min-height:100px"></textarea>
     </div>
 </div>
 </body>
