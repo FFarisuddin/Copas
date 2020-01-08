@@ -60,7 +60,7 @@
 
 .bg {
   /* The image used */
-  background-image: url("https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwiPs5uh7vPmAhUuIbcAHfdLDMgQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbackground%2F&psig=AOvVaw3UE7tEo9ttT7RxAEfUDgr4&ust=1578568017877968");
+  background-image: url("https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg");
 
   /* Full height */
   height: 100%;
