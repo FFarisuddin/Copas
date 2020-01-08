@@ -16,9 +16,8 @@
     $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
     $listBlobsOptions = new ListBlobsOptions();
     $listBlobsOptions->setPrefix("");
-     $size = sizeof($result->getBlobs());
+    $size = sizeof($result->getBlobs());
   
-
     if (isset($_POST['submit'])) {
         $fileToUpload = strtolower($_FILES["photo"]["name"]);
         $content = fopen($_FILES["photo"]["tmp_name"], "r");
@@ -54,6 +53,27 @@
 <head>
     <title>Eftu Indonesia (F2)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 </head>
 <body>
 
