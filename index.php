@@ -126,8 +126,8 @@
     };
 </script>
 
-<div class="row" align="center" display:table>
-    <div class="column" align="left">
+
+    <div align="center">
         <form action="index.php" method="post" enctype="multipart/form-data">
             <font face="verdana"> 1. Klik "Choose File" untuk pilih foto yang diinginkan. </font> <br>
             <input style="width:500px;height:70px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" /><br>
@@ -136,10 +136,12 @@
         </form> 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
     </div>
+
+<div class="row" align="center" display:table>
     <div class="column" display:table-cell>
-		<img id="sourceImage" style="max-width:100%;max-height:200px" />
+		<img id="sourceImage" style="resize:none;max-width:100%;max-height:200px" />
     </div>
-    <div>
+    <div class="column" display:table-cell>
         <textarea id="responseTextArea" style="width:300px;min-height:350px"></textarea>
     </div>
 </div>
