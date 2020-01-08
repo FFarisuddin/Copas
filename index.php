@@ -141,7 +141,7 @@
 		<img id="sourceImage" style="max-width:100%;max-height:200px" />
     </div>
     <div>
-        <textarea id="responseTextArea" style="max-width:100%;min-height:350px"></textarea>
+        <textarea id="responseTextArea" style="max-width:600px;min-height:350px"></textarea>
     </div>
 </div>
 </body>
