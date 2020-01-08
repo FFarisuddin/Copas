@@ -54,7 +54,7 @@
     <title>Eftu Indonesia (F2)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
-<body>
+<body style="background-image: url('https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg');">
 
 
 <script type="text/javascript">
@@ -105,7 +105,7 @@
     };
 </script>
 
-<div align="center" style="background-image: url('https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg');">
+<div align="center">
     <div>
         <form action="index.php" method="post" enctype="multipart/form-data">
             <font face="verdana"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
