@@ -126,8 +126,8 @@
     };
 </script>
 
-
-    <div align="center">
+<div align="center">
+    <div>
         <form action="index.php" method="post" enctype="multipart/form-data">
             <font face="verdana"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
             <input style="width:250px;height:70px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" /> <br>
@@ -136,13 +136,11 @@
         </form> 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
     </div>
-
-<div class="row" align="center" display:table>
-    <div class="column" display:table-cell>
+    <div>
 		<img id="sourceImage" style="resize:none;max-width:100%;max-height:200px" />
     </div>
-    <div class="column" display:table-cell>
-        <textarea id="responseTextArea" style="width:300px;min-height:350px"></textarea>
+    <div>
+        <textarea id="responseTextArea" style="width:500px;min-height:100px"></textarea>
     </div>
 </div>
 </body>
