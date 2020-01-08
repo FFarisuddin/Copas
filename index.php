@@ -54,7 +54,7 @@
     <title>Eftu Indonesia (F2)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
-<body style="background-image: url('https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg');opacity:0.2">
+<body style="background-image: url('https://cdn3.f-cdn.com/contestentries/1489974/18545046/5cba2aba229c4_thumb900.jpg')">
 
 
 <script type="text/javascript">
@@ -108,9 +108,9 @@
 <div align="center">
     <div>
         <form action="index.php" method="post" enctype="multipart/form-data">
-            <font face="verdana"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
+            <font face="verdana" color="white"> 1. Klik "Choose File" untuk memilih fotoMU. </font> <br>
             <input style="width:250px;height:70px" type="file" name="photo" accept=".jpeg,.jpg,.png" required="" /> <br>
-            <font face="verdana"> 2. Klik "MAGIC" mengetahui informasi fotoMU. </font> <br>
+            <font face="verdana" color="white"> 2. Klik "MAGIC" mengetahui informasi fotoMU. </font> <br>
             <input style="width:90px;height:30px" type="submit" name="submit" value="MAGIC" />
         </form> 
         <input type="hidden" name="inputImage" id="inputImage" value="<?php echo $url ?>" /><br>
